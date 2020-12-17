@@ -23,8 +23,8 @@ class Page(object):
     url: str
     language: str
     last_mod: datetime.datetime
-    phone: str = "+420 777 256 077"
-    email: str = "info@annella.cz"
+    phone: str = '<i class="d-plus"></i><i class="d-four"></i><i class="d-two"></i><i class="d-zero"></i> <i class="d-seven"></i><i class="d-seven"></i><i class="d-seven"></i> <i class="d-two"></i><i class="d-five"></i><i class="d-six"></i> <i class="d-zero"></i><i class="d-six"></i><i class="d-eight"></i>'
+    email: str = 'info<i class="ch-at"></i>annella<i class="ch-dot"></i>cz'
 
     def keys(self):
         """Get keys that allows conversion of this class to dictionary.

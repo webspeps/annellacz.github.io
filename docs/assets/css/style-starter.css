@@ -12037,3 +12037,47 @@ a.testi-img {
 .english:hover, .german:hover, .spanish:hover {
     opacity: 1;
 }
+
+i.d-zero, i.d-one, i.d-two, i.d-plus, i.d-three, i.d-four, i.d-five, i.d-six, i.d-seven, i.d-eight, i.d-nine, i.ch-at, i.ch-dot{
+    font-style: normal;
+}
+.d-zero:before {
+  content: "0";
+}
+.d-plus:before {
+  content: "+";
+}
+.d-one:before {
+  content: "1";
+}
+.d-two:before {
+  content: "2";
+}
+.d-three:before {
+  content: "3";
+}
+.d-four:before {
+  content: "4";
+}
+.d-five:before {
+  content: "5";
+}
+.d-six:before {
+  content: "6";
+}
+.d-seven:before {
+  content: "7";
+}
+.d-eight:before {
+  content: "8";
+}
+.d-nine:before {
+  content: "9";
+}
+
+.ch-at:before {
+  content: "@";
+}
+.ch-dot:before {
+  content: ".";
+}
