@@ -1,0 +1,105 @@
+{% if url=='index' %}
+<!-- main-slider -->
+<section class="w3l-main-slider" id="home">
+    <div class="companies20-content">
+        <div class="owl-one owl-carousel owl-theme">
+            <div class="item">
+                <li>
+                    <div class="slider-info banner-view bg bg2">
+                        <div class="banner-info">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-6 banner-info-bg">
+                                        <h5>Pomůžeme vám najít cestu k úspěchu </h5>
+                                        <p class="mt-md-4 mt-3">Již více než deset let pomáháme lidem najít cestu k úspěchu. Poskytujeme školení a kurzy, které zlepší vaše kariérní vyhlídky.</p>
+                                        <a class="btn btn-style btn-primary mt-sm-5 mt-4 mr-2" href="sluzby.html">Školení</a>
+                                        <a class="btn btn-style btn-outline-light mt-sm-5 mt-4 mr-2" href="o-nas.html">O firmě</a>
+                                    </div>
+                                    <div class="col-lg-5 col-md-8 img offset-lg-1 mt-lg-0 mt-4">
+                                        <img src="assets/images/bard_03.gif" alt="Školení a kurzy" class="img-fluid radius-image-curve" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </div>
+            <div class="item">
+                <li>
+                    <div class="slider-info  banner-view banner-top1 bg bg2">
+                        <div class="banner-info">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-6 banner-info-bg">
+                                        <h5>Poznejte své silné a slabé stránky</h5>
+                                        <p class="mt-md-4 mt-3">Každý člověk vykazuje jisté osobnostní charakteristiky určující jeho silné a slabé stránky. Pomůžeme vám najít, kde jsou ty vaše.</p>
+                                        <a class="btn btn-style btn-primary mt-sm-5 mt-4 mr-2" href="sluzby.html">Školení</a>
+                                        <a class="btn btn-style btn-outline-light mt-sm-5 mt-4 mr-2" href="o-nas.html">O firmě</a>
+                                    </div>
+                                    <div class="col-lg-5 col-md-8 img offset-lg-1 mt-lg-0 mt-4">
+                                        <img src="assets/images/bard_02.gif" alt="Školení a kurzy" class="img-fluid radius-image-curve" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </div>
+            <div class="item">
+                <li>
+                    <div class="slider-info banner-view banner-top2 bg bg2">
+                        <div class="banner-info">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-6 banner-info-bg">
+                                        <h5>Máme více než deset let zkušeností </h5>
+                                        <p class="mt-md-4 mt-3">Firma ANNELLA má již více než deset let zkušeností se školeními. Náš tým se skládá ze zkušených školitelů s letitou praxí.</p>
+                                        <a class="btn btn-style btn-primary mt-sm-5 mt-4 mr-2" href="sluzby.html">Školení</a>
+                                        <a class="btn btn-style btn-outline-light mt-sm-5 mt-4 mr-2" href="o-nas.html">O firmě</a>
+                                    </div>
+                                    <div class="col-lg-5 col-md-8 img offset-lg-1 mt-lg-0 mt-4">
+                                        <img src="assets/images/bard_01.gif" alt="Školení a kurzy" class="img-fluid radius-image-curve" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </div>
+            <div class="item">
+                <li>
+                    <div class="slider-info banner-view banner-top3 bg bg2">
+                        <div class="banner-info">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-6 banner-info-bg">
+                                        <h5>Testujeme znalosti a vydáváme certifikáty</h5>
+                                        <p class="mt-md-4 mt-3">Ověřujeme znalosti zájemců na profesionální úrovni v řadě oborů a vydáváme hodnotné certifikáty dokazující vaši odbornost.</p>
+                                        <a class="btn btn-style btn-primary mt-sm-5 mt-4 mr-2" href="sluzby.html">Školení</a>
+                                        <a class="btn btn-style btn-outline-light mt-sm-5 mt-4 mr-2" href="o-nas.html">O firmě</a>
+                                    </div>
+                                    <div class="col-lg-5 col-md-8 img offset-lg-1 mt-lg-0 mt-4">
+                                        <img src="assets/images/bard_04.gif" alt="Školení a kurzy" class="img-fluid radius-image-curve" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /main-slider -->
+{% else %}
+<div class="inner-banner">
+</div>
+<section class="w3l-breadcrumb">
+    <div class="container">
+        <ul class="breadcrumbs-custom-path">
+            <li><a href="{{ link_to_homepage }}">Home</a></li>
+            <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> {{ title }}</li>
+        </ul>
+    </div>
+</section>
+{% endif %}

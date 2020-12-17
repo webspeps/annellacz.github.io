@@ -1,0 +1,30 @@
+<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+  <ul class="navbar-nav ml-auto">
+      <li class="nav-item{% if url == 'index' %} active{% endif %}">
+          <a class="nav-link" href="{{ link_to_homepage }}">Home{% if url == 'index' %} <span class="sr-only">(zde)</span>{% endif %}</a>
+      </li>
+      <li class="nav-item{% if url == 'o-nas' %} active{% endif %}">
+          <a class="nav-link" href="o-nas.html">O nás{% if url == 'o-nas' %} <span class="sr-only">(zde)</span>{% endif %}</a>
+      </li>
+      <li class="nav-item{% if url == 'skoleni-a-kurzy' %} active{% endif %}">
+          <a class="nav-link" href="skoleni-a-kurzy.html">Školení &amp; Kurzy{% if url == 'skoleni-a-kurzy' %} <span class="sr-only">(zde)</span>{% endif %}</a>
+      </li>
+      <li class="nav-item{% if url == 'certifikaty' %} active{% endif %}">
+          <a class="nav-link" href="certifikaty.html">Certifikáty{% if url == 'certifikaty' %} <span class="sr-only">(zde)</span>{% endif %}</a>
+      </li>
+      <li class="nav-item{% if url == 'kontakt' %} active{% endif %}">
+          <a class="nav-link" href="kontakt.html">Kontakt{% if url == 'kontakt' %} <span class="sr-only">(zde)</span>{% endif %}</a>
+      </li>
+      <!--/search-right-->
+      <div class="search mr-3">
+          <input class="search_box" type="checkbox" id="search_box">
+          <label class="fa fa-search" for="search_box"></label>
+          <div class="search_form">
+              <form action="index.html" method="GET">
+                  <input type="text" placeholder="Hledat"><input type="submit" value="hledat">
+              </form>
+          </div>
+      </div>
+      <!--//search-right-->
+  </ul>
+</div>

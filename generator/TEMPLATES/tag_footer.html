@@ -1,0 +1,78 @@
+<!-- footer -->
+ <section class="w3l-footer-29-main">
+  <div class="footer-29 py-5">
+    <div class="container py-lg-4">
+      <div class="row footer-top-29">
+        <div class="col-lg-4 col-md-6 footer-list-29 footer-1 pr-lg-5">
+          <div class="footer-logo mb-4">
+            <a class="navbar-brand" href="{{ link_to_homepage }}"><span>ANNELLA</span></a>
+          </div>
+          <p>Jsme dynamická firma poskytující širokou nabídku školení, kurzů a seminářů. Zaměřujeme se na vzdělávací a poradenskou činnost pro malé firmy i velké podniky. Snažíme se v maximální míře přizpůsobit přáním zákazníků. </p>
+        </div>
+        <div class="col-lg-2 col-md-6 col-sm-5 col-5 footer-list-29 footer-2 mt-md-0 mt-5">
+
+          <ul>
+            <h6 class="footer-title-29">Odkazy</h6>
+            <li><a href="o-nas.html">O nás</a></li>
+            <li><a href="skoleni-a-kurzy.html"> Školení</a></li>
+            <li><a href="skoleni-a-kurzy.html"> Kurzy</a></li>
+            <li><a href="kontakt.html">Kotakt</a></li>
+            <li><a href="skoleni-a-kurzy.html">DISC</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-7 col-7 footer-list-29 footer-3 mt-lg-0 mt-5">
+          <h6 class="footer-title-29">Kontakt</h6>
+          <p class="mb-2"><span class="fa fa-support"></span> &nbsp; ANNELLA s.r.o.</p>
+          <p class="mb-3"><span class="fa fa-map"></span> &nbsp; Voroněžská 144/20,<br>Liberec, PSČ 460 01.</p>
+          <p class="mb-2"> <span class="fa fa-phone"></span> &nbsp;&nbsp;{{ phone }}</p>
+          <p><span class="fa fa-envelope-o"></span> <a href="#">&nbsp;&nbsp;{{ email }}</a></p>
+        </div>
+        <div class="col-lg-3 col-md-6 footer-list-29 footer-4 mt-lg-0 mt-5">
+          <h6 class="footer-title-29">Populární kurzy</h6>
+          <div class="post1">
+            <a href="#url" class="post-title">Poznejte sami sebe pomocí typologie DISC</a>
+            <p class="small">Poskytujeme pro skupiny nad 10 lidí.</p>
+          </div>
+          <div class="post1 mt-4">
+            <a href="#url" class="post-title">Komunikace pro prodejní a obchodní dovednosti</a>
+            <p class="small">Poskytujeme pro skupiny nad 10 lidí.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- copyright -->
+  <section class="w3l-copyright text-center">
+    <div class="container">
+      <p class="copy-footer-29">© 2020 ANNELLA s.r.o. Všechna práva vyhrazena.</p>
+    </div>
+
+    <!-- move top -->
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+      &#10548;
+    </button>
+    <script>
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction()
+      };
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("movetop").style.display = "block";
+        } else {
+          document.getElementById("movetop").style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+    <!-- /move top -->
+  </section>
+  <!-- //copyright -->
+</section>
+<!-- //footer -->

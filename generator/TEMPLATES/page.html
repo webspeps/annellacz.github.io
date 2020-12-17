@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="{{ language }}">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>ANNELLA - {{ title }}</title>
+    <meta name="keywords" content="{{ keywords }}" />
+    <meta name="description" content="{{ description }}">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="assets/css/style-starter.css">
+  </head>
+  <body>
+<!--header-->
+<header id="site-header" class="fixed-top">
+  <div class="container">
+      <nav class="navbar navbar-expand-lg stroke px-0">
+          <h1> <a class="navbar-brand" href="{{ link_to_homepage }}">ANNELLA</a></h1>
+          <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+              data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+              aria-label="Navigace">
+              <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+              <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+          </button>
+          {% include "tag_menu.html" %}
+          <!-- toggle switch for light and dark theme -->
+          <div class="mobile-position">
+              <nav class="navigation">
+                  <div class="theme-switch-wrapper">
+                      <label class="theme-switch" for="checkbox">
+                          <input type="checkbox" id="checkbox">
+                          <div class="mode-container">
+                              <i class="gg-sun"></i>
+                              <i class="gg-moon"></i>
+                          </div>
+                      </label>
+                  </div>
+              </nav>
+          </div>
+          <!-- //toggle switch for light and dark theme -->
+      </nav>
+  </div>
+</header>
+{% include 'tag_header.html' %}
+{% include content_file %}
+
+{# INCLUDE FOOTER #}
+{% include 'tag_footer.html' %}
+<!--  javascripts file here -->
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+
+<script src="assets/js/theme-change.js"></script> <!-- //light and dark mode switch js -->
+
+<script src="assets/js/circles.js"></script>
+
+<!-- stats number counter-->
+<script src="assets/js/jquery.waypoints.min.js"></script>
+<script src="assets/js/jquery.countup.js"></script>
+<script>
+  $('.counter').countUp();
+</script>
+<!-- //stats number counter -->
+
+<!-- owl carousel -->
+<script src="assets/js/owl.carousel.js"></script>
+<!-- script for banner slider-->
+<script>
+  $(document).ready(function () {
+    $('.owl-one').owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: false,
+      responsiveClass: true,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      autoplaySpeed: 1000,
+      autoplayHoverPause: false,
+      responsive: {
+        0: {
+          items: 1
+        },
+        480: {
+          items: 1
+        },
+        667: {
+          items: 1
+        },
+        1000: {
+          items: 1
+        }
+      }
+    })
+  })
+</script>
+<!-- //script -->
+<!-- owl carousel -->
+
+<!-- script for tesimonials carousel slider -->
+<script>
+  $(document).ready(function () {
+    $("#owl-demo2").owlCarousel({
+      loop: true,
+      margin: 20,
+      nav: false,
+      responsiveClass: true,
+      responsive: {
+        0: {
+          items: 1,
+          nav: false
+        },
+        1000: {
+          items: 1,
+          nav: false,
+          loop: false
+        }
+      }
+    })
+  })
+</script>
+<!-- //script for tesimonials carousel slider -->
+
+<!-- disable body scroll which navbar is in active -->
+<script>
+  $(function () {
+    $('.navbar-toggler').click(function () {
+      $('body').toggleClass('noscroll');
+    })
+  });
+</script>
+<!-- disable body scroll which navbar is in active -->
+
+<!--/MENU-JS-->
+<script>
+  $(window).on("scroll", function () {
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 80) {
+      $("#site-header").addClass("nav-fixed");
+    } else {
+      $("#site-header").removeClass("nav-fixed");
+    }
+  });
+
+  //Main navigation Active Class Add Remove
+  $(".navbar-toggler").on("click", function () {
+    $("header").toggleClass("active");
+  });
+  $(document).on("ready", function () {
+    if ($(window).width() > 991) {
+      $("header").removeClass("active");
+    }
+    $(window).on("resize", function () {
+      if ($(window).width() > 991) {
+        $("header").removeClass("active");
+      }
+    });
+  });
+</script>
+<!--//MENU-JS-->
+
+<script src="assets/js/bootstrap.min.js"></script><!-- //bootstrap js -->
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{#
+<!DOCTYPE html>
+<html lang="{{ language }}">
+<head>
+    <title>{{ title }}</title>
+    <!-- for-mobile-apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="{{ keywords }}" />
+    <meta name="description" content="{{ description }}">
+
+    <meta name="author" content="Sybarite s.r.o.">
+    <link rel="shortcut icon" href="favicon.png?" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+                    function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //for-mobile-apps -->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	{% if url == 'reference' %}
+		<link rel="stylesheet" href="css/swipebox.css">
+	{% endif %}
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- js -->
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <!-- //js -->
+    <!--animate-->
+    <link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
+    <script src="js/wow.min.js"></script>
+            <script>
+                     new WOW().init();
+            </script>
+    <!--//end-animate-->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=latin-ext" rel="stylesheet">
+    <script src="js/responsiveslides.min.js"></script>
+	{% if url == 'sluzby' %}
+    	<script src="js/easyResponsiveTabs.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				//Vertical Tab
+				$('#parentVerticalTab').easyResponsiveTabs({
+					type: 'vertical', //Types: default, vertical, accordion
+					width: 'auto', //auto or any width like 600px
+					fit: true, // 100% fit in a container
+					closed: 'accordion', // Start closed if in accordion view
+					tabidentify: 'hor_1', // The tab groups identifier
+					activate: function(event) { // Callback function if tab is switched
+						var $tab = $(this);
+						var $info = $('#nested-tabInfo2');
+						var $name = $('span', $info);
+						$name.text($tab.text());
+						$info.show();
+					}
+				});
+			});
+		</script>
+	{% endif %}
+</head>
+<body>
+<!--header-->
+<div class="ban-top">
+		<div class="top_nav_left">
+			<nav class="navbar navbar-default">
+			  <div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Navigace</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				  </button>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				{% include "menu.html" %}
+			  </div>
+			</nav>
+		</div>
+		<div class="top_nav_right">
+                        <a href="english.html">ENGLISH</a>
+		</div>
+		<div class="clearfix"></div>
+</div>
+<!-- //header -->
+<!-- banner-bot -->
+<div class="header-bot">
+	<div class="container">
+		<div class="col-md-6 header_left">
+                    <h1><a href="{{ link_to_homepage }}"><img src="images/logo.svg" alt="Sybarite s.r.o." ></a></h1>
+		</div>
+		<div class="col-md-6 header_right">
+			<ul>
+				<li><i class="glyphicon glyphicon-phone sup-icon"></i>ZAVOLEJTE NÁM<span>
+					+<i class="d-four"></i><i class="d-two"></i><i class="d-zero"></i> <i class="d-seven"></i><i class="d-seven"></i><i class="d-seven"></i> <i class="d-two"></i><i class="d-five"></i><i class="d-six"></i> <i class="d-zero"></i><i class="d-seven"></i><i class="d-seven"></i>
+				</span></li>
+				<li><i class="glyphicon glyphicon-envelope sup-icon"></i>NAPIŠTE NÁM<span><a href="mailto:info(Z)example(T)com">info<em class="atSymbol"></em>sybarite<em class="dotSymbol"></em>cz</a></span></li>
+			</ul>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+<!-- //banner-bot -->
+<!-- banner -->
+<div class="banner">
+	{% if url == 'index' %}
+		<script>
+				// You can also use "$(window).load(function() {"
+				$(function () {
+				 // Slideshow 4
+				$("#slider3").responsiveSlides({
+					auto: true,
+					pager: false,
+					nav: false,
+					speed: 500,
+					namespace: "callbacks",
+					before: function () {
+				$('.events').append("<li>before event fired.</li>");
+				},
+				after: function () {
+					$('.events').append("<li>after event fired.</li>");
+					}
+					});
+				});
+		</script>
+		<div  id="top" class="callbacks_container">
+			<ul class="rslides" id="slider3">
+				<li>
+					<div class="banner1">
+						<div class="container">
+							<div class="banner-info">
+								<h3>TVOŘÍME STRÁNKY <span> KTERÉ VYDĚLÁVAJÍ </span></h3>
+								<p>NEJEN PRO FIRMY A ŽIVNOSTNÍKY</p>
+								<ul>
+									<li><a href="#"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Webové stránky</a></li>
+									<li><a href="#"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>SEO</a></li>
+								</ul>
+								<ul>
+									<li><a href="#"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Eshopy</a></li>
+									<li><a href="#"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>CMS systémy </a></li>
+								</ul>
+								<ul>
+									<li><a href="#"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Řešení na míru</a></li>
+									<li><a href="#"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Design </a></li>
+								</ul>
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="banner2">
+						<div class="container">
+							<div class="banner-info">
+								<h3>NAŠE ŘEŠENÍ VÁS <span> POSUNOU VÝŠE </span></h3>
+								<p>NEJEN VE VYHLEDÁVAČI</p>
+								<ul>
+									<li><a href="#"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Webové stránky</a></li>
+									<li><a href="#"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>SEO</a></li>
+								</ul>
+								<ul>
+									<li><a href="#"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Eshopy</a></li>
+									<li><a href="#"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>CMS systémy </a></li>
+								</ul>
+								<ul>
+									<li><a href="#"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Řešení na míru</a></li>
+									<li><a href="#"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Design </a></li>
+								</ul>
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="clearfix"></div>
+	{% else %}
+    	<div class="page-head"></div>
+	{% endif %}
+</div>
+<!-- //banner -->
+{% include content_file %}
+<!-- contact -->
+<div class="contact">
+	<div class="container">
+		<div class="col-md-4 contact-left">
+                    <h2><a href="{{ link_to_homepage }}"><img src="images/logo.svg" alt="Sybarite s.r.o." ></a></h2>
+			<p>Společnost Sybarite nabízí profesionální služby v oblasti marketingu a on-line řešení. S námi najdete cestu, jak s produkty vydělat.</p>
+			<ul class="fb_icons2">
+				<li><a class="fb" href="https://www.facebook.com/pages/Sybarite/827122174007211"></a></li>
+				<li><a class="twit" href="https://twitter.com/Sybarite_cz"></a></li>
+				<li><a class="home" href="{{ link_homepage }}"></a></li>
+			</ul>
+		</div>
+		<div class="col-md-3 contact-mid">
+			<h3>Odkazy</h3>
+			<ul>
+				<li><a href="http://www.sybarite.eu"><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>Marketingová sekce</a></li>
+				<li><a href="projekty.html"><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>Eshopy</a></li>
+				<li><a href="english.html"><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>English version</a></li>
+				<li><a href="kontakt.html"><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>Kontaktujte nás</a></li>
+				<li><a href="http://e-analysta.sybarite.cz/"><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span>E-Analysta</a></li>
+			</ul>
+		</div>
+		<div class="col-md-5 mail_right">
+			<h3>Nezávazná poptávka</h3>
+				<form id="odeslatFooterForm">
+                                    <input type="text" id="jmenoFooter" placeholder="Jméno" required="">
+                                        <input type="email" id="emailFooter" placeholder="Email" required="">
+                                        <textarea id="zpravaFooter" placeholder="Zpráva či nezávazná poptávka..." required=""></textarea>
+                                        <input type="submit" value="Odeslat" id="odeslatFooter">
+
+				</form>
+				<script>
+					$(document).ready(function () {
+						$('#odeslatFooterForm').submit(function () {
+							var jmeno = $("#jmenoFooter").val();
+							var email = $("#emailFooter").val();
+							var zprava = $("#zpravaFooter").val();
+							if(jmeno != "" && email != "" && zprava != "") {
+								alert("Dočasně mimo provoz, použíjte prosím email. Děkujeme.");
+							}
+						});
+					});
+				</script>
+		</div>
+		<div class="clearfix"></div>
+		<p class="footer">&copy; 2020 Sybarite s.r.o.</p>
+	</div>
+</div>
+<!-- //contact -->
+<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+</body>
+</html>
+#}
