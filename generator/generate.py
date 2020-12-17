@@ -74,7 +74,7 @@ pages = [
          url="index",
          content_file='page_home.html',
          language="cs",
-         last_mod=datetime.datetime(2020, 12, 10)
+         last_mod=datetime.datetime(2020, 12, 17)
          ),
     Page(title="o nás",
          keywords=unified_keywords,
@@ -82,7 +82,7 @@ pages = [
          url="o-nas",
          content_file='page_o_nas.html',
          language="cs",
-         last_mod=datetime.datetime(2020, 12, 10)
+         last_mod=datetime.datetime(2020, 12, 17)
          ),
     Page(title="školení a kurzy",
          keywords=unified_keywords,
@@ -90,7 +90,7 @@ pages = [
          url="skoleni-a-kurzy",
          content_file='page_skoleni_kurzy.html',
          language="cs",
-         last_mod=datetime.datetime(2020, 12, 10)
+         last_mod=datetime.datetime(2020, 12, 17)
          ),
     Page(title="certifikáty",
          keywords=unified_keywords,
@@ -98,7 +98,7 @@ pages = [
          url="certifikaty",
          content_file='page_certifikaty.html',
          language="cs",
-         last_mod=datetime.datetime(2020, 12, 10)
+         last_mod=datetime.datetime(2020, 12, 17)
          ),
     Page(title="kontakt",
          keywords=unified_keywords,
@@ -106,7 +106,7 @@ pages = [
          url="kontakt",
          content_file='page_kontakt.html',
          language="cs",
-         last_mod=datetime.datetime(2020, 12, 10)
+         last_mod=datetime.datetime(2020, 12, 17)
          )
 ]
 
